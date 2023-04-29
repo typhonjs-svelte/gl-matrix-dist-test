@@ -48,6 +48,10 @@
     "watch": "tsc --watch",
     "test": "vitest run"
   },
+  "files": [
+    "/dist",
+    "/types"
+  ],
   "devDependencies": {
     "esbuild": "^0.15.15",
     "typedoc": "^0.23.21",
