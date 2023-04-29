@@ -4,6 +4,7 @@
     "module": "esnext",
     "lib": ["esnext", "dom"],
     "outDir": "dist/src",
+    "declarationDir": "./.types",
     "rootDir": "./src",
     "sourceMap": true,
     "moduleResolution": "node",

@@ -1,6 +1,8 @@
+.idea
 .rvmrc
 .DS_Store
 node_modules
 npm-debug.log
+.types
 dist
 docs
