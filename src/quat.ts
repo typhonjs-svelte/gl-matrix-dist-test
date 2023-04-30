@@ -994,8 +994,8 @@ export class Quat extends Float32Array {
 }
 
 // Temporary variables to prevent repeated allocations in the algorithms above.
-const temp1 = new Quat();
-const temp2 = new Quat();
+const temp1: QuatLike = [0, 0, 0, 0];
+const temp2: QuatLike = [0, 0, 0, 0];
 const tempMat3: Mat3Like = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 const tmpVec3: Vec3Like = [0, 0, 0];
