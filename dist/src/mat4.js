@@ -1,5 +1,4 @@
 import { EPSILON } from './common.js';
-import { Vec3 } from './vec3.js';
 const IDENTITY_4X4 = new Float32Array([
     1, 0, 0, 0,
     0, 1, 0, 0,
@@ -1129,7 +1128,7 @@ export class Mat4 extends Float32Array {
      * @returns `out`
      */
     static fromQuat2(out, a) {
-        let translation = new Vec3();
+        let translation = [0, 0, 0];
         const bx = -a[0];
         const by = -a[1];
         const bz = -a[2];
@@ -2113,7 +2112,7 @@ export class Mat4 extends Float32Array {
     }
 }
 // Temporary variables to prevent repeated allocations in the algorithms above.
-const tmpVec3 = new Vec3();
+const tmpVec3 = [0, 0, 0];
 // Instance method alias assignments
 Mat4.prototype.mul = Mat4.prototype.multiply;
 // Static method alias assignments

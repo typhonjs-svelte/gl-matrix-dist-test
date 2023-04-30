@@ -1,8 +1,7 @@
 import { EPSILON } from './common.js';
-import { Vec3, Vec3Like } from './vec3.js';
-import { Vec4Like } from './vec4.js';
-import { QuatLike } from './quat.js';
-import { Quat2Like } from './quat2.js';
+import type { Vec3, Vec3Like } from './vec3.js';
+import type { QuatLike } from './quat.js';
+import type { Quat2Like } from './quat2.js';
 
 /**
  * A 4x4 Matrix given as a {@link Mat4}, a 16-element Float32Array, or an array
@@ -1268,7 +1267,7 @@ export class Mat4 extends Float32Array {
    * @returns `out`
    */
   static fromQuat2(out: Mat4Like, a: Quat2Like): Mat4Like {
-    let translation = new Vec3();
+    let translation: Vec3Like = [0, 0, 0];
     const bx = -a[0];
     const by = -a[1];
     const bz = -a[2];
@@ -2322,7 +2321,7 @@ export class Mat4 extends Float32Array {
 }
 
 // Temporary variables to prevent repeated allocations in the algorithms above.
-const tmpVec3 = new Vec3();
+const tmpVec3: Vec3Like = [0, 0, 0];
 
 // Instance method alias assignments
 Mat4.prototype.mul = Mat4.prototype.multiply;

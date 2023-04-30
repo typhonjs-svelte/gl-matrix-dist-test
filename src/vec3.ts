@@ -1,7 +1,7 @@
 import { EPSILON } from './common.js';
-import { Mat4Like } from './mat4.js';
-import { Mat3Like } from './mat3.js';
-import { QuatLike } from './quat.js';
+import type { Mat4Like } from './mat4.js';
+import type { Mat3Like } from './mat3.js';
+import type { QuatLike } from './quat.js';
 
 /**
  * A 3 dimensional vector given as a {@link Vec3}, a 3-element Float32Array, or
