@@ -1,8 +1,9 @@
 import { EPSILON } from './common.js';
-import { Mat2dLike } from './mat2d.js';
-import { Mat4Like } from './mat4.js';
-import { Vec2Like } from './vec2.js';
-import { QuatLike } from './quat.js';
+
+import type { Mat2dLike } from './mat2d.js';
+import type { Mat4Like } from './mat4.js';
+import type { Vec2Like } from './vec2.js';
+import type { QuatLike } from './quat.js';
 
 /**
  * A 3x3 Matrix given as a {@link Mat3}, a 9-element Float32Array, or an array

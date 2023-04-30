@@ -1,6 +1,7 @@
 import { EPSILON } from './common.js';
-import { Mat4Like } from './mat4.js';
-import { QuatLike } from './quat.js';
+
+import type { Mat4Like } from './mat4.js';
+import type { QuatLike } from './quat.js';
 
 /**
  * A 4 dimensional vector given as a {@link Vec4}, a 4-element Float32Array, or

@@ -1,5 +1,6 @@
 import { EPSILON } from './common.js';
-import { Vec2Like } from './vec2.js';
+
+import type { Vec2Like } from './vec2.js';
 
 /**
  * A 2x3 Matrix given as a {@link Mat2d}, a 6-element Float32Array, or an array

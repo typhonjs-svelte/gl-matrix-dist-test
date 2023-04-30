@@ -1,5 +1,4 @@
 import { EPSILON } from './common.js';
-import { Mat3 } from './mat3.js';
 import { Vec3 } from './vec3.js';
 import { Vec4 } from './vec4.js';
 /**
@@ -886,10 +885,10 @@ export class Quat extends Float32Array {
 // Temporary variables to prevent repeated allocations in the algorithms above.
 const temp1 = new Quat();
 const temp2 = new Quat();
-const tempMat3 = new Mat3();
-const tmpVec3 = new Vec3();
-const xUnitVec3 = new Vec3(1, 0, 0);
-const yUnitVec3 = new Vec3(0, 1, 0);
+const tempMat3 = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+const tmpVec3 = [0, 0, 0];
+const xUnitVec3 = [1, 0, 0];
+const yUnitVec3 = [0, 1, 0];
 // Methods which re-use the Vec4 implementation
 Quat.set = Vec4.set;
 Quat.add = Vec4.add;

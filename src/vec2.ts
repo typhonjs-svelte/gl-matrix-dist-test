@@ -1,10 +1,9 @@
 import { EPSILON } from './common.js';
-import { Mat2Like } from './mat2.js';
-import { Mat2dLike } from './mat2d.js';
-import { Mat3Like } from './mat3.js';
-import { Mat4Like } from './mat4.js';
-import { Vec3 } from './vec3.js';
-import { Vec4 } from './vec4.js';
+
+import type { Mat2Like } from './mat2.js';
+import type { Mat2dLike } from './mat2d.js';
+import type { Mat3Like } from './mat3.js';
+import type { Mat4Like } from './mat4.js';
 
 /**
  * A 2 dimensional vector given as a {@link Vec2}, a 2-element Float32Array, or

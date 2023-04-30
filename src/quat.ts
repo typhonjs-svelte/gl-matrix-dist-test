@@ -1,7 +1,10 @@
 import { EPSILON } from './common.js';
-import { Mat3, Mat3Like } from './mat3.js';
-import { Vec3, Vec3Like } from './vec3.js';
-import { Vec4, Vec4Like } from './vec4.js';
+import { Vec3 } from './vec3.js';
+import { Vec4 } from './vec4.js';
+
+import type { Mat3Like } from './mat3.js';
+import type { Vec3Like } from './vec3.js';
+import type { Vec4Like } from './vec4.js';
 
 /**
  * A Quaternion given as a {@link Quat}, a 4-element Float32Array, or
@@ -993,11 +996,11 @@ export class Quat extends Float32Array {
 // Temporary variables to prevent repeated allocations in the algorithms above.
 const temp1 = new Quat();
 const temp2 = new Quat();
-const tempMat3 = new Mat3();
+const tempMat3: Mat3Like = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-const tmpVec3 = new Vec3();
-const xUnitVec3 = new Vec3(1, 0, 0);
-const yUnitVec3 = new Vec3(0, 1, 0);
+const tmpVec3: Vec3Like = [0, 0, 0];
+const xUnitVec3: Vec3Like = [1, 0, 0];
+const yUnitVec3: Vec3Like= [0, 1, 0];
 
 // Methods which re-use the Vec4 implementation
 Quat.set = Vec4.set;
